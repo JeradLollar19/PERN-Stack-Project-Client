@@ -1,4 +1,5 @@
 import React from 'react';
+import APIURL from '../helpers/enivronment';
 import {Table} from 'reactstrap';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -10,7 +11,7 @@ const ReviewTable = (props) => {
 
 
     const deleteReview = (review) => {
-        fetch(`http://localhost:3000/reviews/${review.id}`, {
+        fetch(`${APIURL}reviews/${review.id}`, {
             method: 'DELETE',
             headers: new Headers({
                 'Content-Type': 'application/json',

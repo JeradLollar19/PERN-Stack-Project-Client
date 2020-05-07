@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import APIURL from '../helpers/enivronment';
 import { Container, Row, Col } from 'reactstrap';
 import ReviewCreate from './ReviewCreate';
 import ReviewTable from './ReviewTable';
@@ -13,7 +14,7 @@ const ReviewIndex = (props) => {
 
 
     const fetchReviews = () => {
-        fetch('http://localhost:3000/reviews/myOwn', {
+        fetch(`${APIURL}reviews/myOwn`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

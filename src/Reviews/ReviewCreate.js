@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import APIURL from '../helpers/enivronment';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
@@ -14,7 +15,7 @@ const ReviewCreate = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/reviews/', {
+        fetch(`${APIURL}reviews/`, {
             method: 'POST',
             body: JSON.stringify({ review: { filmTitle: filmTitle, year: year, director: director, overallThoughts: overallThoughts, rating: rating } }),
             headers: new Headers({

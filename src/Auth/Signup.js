@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import APIURL from '../helpers/enivronment';
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 import Button from '@material-ui/core/Button';
 
@@ -9,7 +10,7 @@ const Signup = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:3000/user/create', {
+        fetch(`${APIURL}user/create`, {
             method: 'POST',
             body: JSON.stringify({user: {username: username, password: password}}),
             headers: new Headers({

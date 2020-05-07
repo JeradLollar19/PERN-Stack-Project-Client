@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import APIURL from '../helpers/enivronment';
 import { FormGroup, Input, Form, Label, Modal, ModalBody } from 'reactstrap';
 import Button from '@material-ui/core/Button';
 
@@ -13,7 +14,7 @@ const ReviewEdit = (props) => {
 
     const reviewUpdate = (event, review) => {
         event.preventDefault();
-        fetch(`http://localhost:3000/reviews/${props.reviewToUpdate.id}`, {
+        fetch(`${APIURL}reviews/${props.reviewToUpdate.id}`, {
             method: 'PUT',
             body: JSON.stringify({ review: { filmTitle: editTitle, year: editYear, director: editDirector, overallThoughts: editThoughts, rating: editRating } }),
             headers: new Headers({
