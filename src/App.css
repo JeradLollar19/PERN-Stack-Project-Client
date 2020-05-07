@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(66, 66, 66);
+}
+
+
+h1 {
+  font-style: italic;
+  font-weight: 800;
+  text-align: center;
+  color: rgb(139, 139, 139);
+}
+
+h6 {
+  color: rgb(0, 0, 0);
+}
+
+
+label {
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(78, 81, 243);
+}
+
+
+table {
+  border-radius: 5px;
+}
+
+
+#tableTitle {
+  text-align: center;
+}
+
+
+#formTitle {
+  text-align: center;
+}
+
+
+th {
+
+  color: rgb(78, 81, 243);
+}
+
+
+#editHeader {
+  font-style: italic;
+  font-weight: 800;
+  color: rgb(139, 139, 139);
+  text-align: center;
+}

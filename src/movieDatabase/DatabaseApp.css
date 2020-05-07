@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header { 
+    padding: 50px 15px 0px;
+}
+
+
+header h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+
+main {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 15px;
+}
+
+
+.searchbar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: none;
+    background-color: white;
+    border-radius: 4px;
+    color: rgb(85, 85, 85);
+    font-size: 20px;
+    transition: 0.4 ease-out;
+}
+
+
+.searchbar:focus {
+    box-shadow: 0px 0px 8px 3px rgb(78, 81, 243);
+}
+
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.results .result {
+    width: 33%;
+    min-width: 240px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+.results .result img {
+    display: block;
+    max-width: 240px;
+    border-radius: 6px;
+}
+
+
+.results .result h3 {
+    color: rgb(78, 81, 243);
+    font-size: 20px;
+    font-weight: 800;
+    max-width: 240px;
+    padding:8px;
+    background: #343a41;
+    flex: 1 1 100%;
+    transition: 0.4s ease-out;
+    border-radius: 6px;
+}
+
+
+.results .result:hover h3 {
+    background: grey;
+    color: black;
+}
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(66, 66, 66);
+    overflow-y: scroll;
+}
+
+
+.popup .content {
+    display: block;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px;
+    color: white;
+}
+
+
+.popup .content h2 {
+    font-size: 40px;
+    color: rgb(139, 139, 139);
+    font-weight: 800;
+}
+
+
+.popup .content h2 span {
+    color: rgb(78, 81, 243);
+    font-size: 25px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.popup .content .rating {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: rgb(78, 81, 243);
+}
+
+
+.popup .content .plot {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -15px 30px;
+}
+
+
+.popup .content img {
+    border-radius: 6px;
+    flex: 1 1 50%;
+    max-width: 240px;
+}
+
+
+.popup .content .plot p {
+    font-size: 20px;
+    flex: 1 1 50%;
+    padding: 15px;
+}
