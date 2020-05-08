@@ -9,6 +9,7 @@ const Login = (props) => {
 
 
     const handleSubmit = (event) => {
+        console.log(APIURL);
         event.preventDefault();
         fetch(`${APIURL}user/login`, {
             method: 'POST',
