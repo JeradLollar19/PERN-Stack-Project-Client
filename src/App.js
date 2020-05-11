@@ -7,6 +7,7 @@ import Auth from './Auth/Auth';
 import ReviewIndex from './Reviews/ReviewIndex';
 import DatabaseApp from './movieDatabase/DatabaseApp';
 import Paper from '@material-ui/core/Paper';
+import Footer from './Home/Footer';
 
 
 function App() {
@@ -35,12 +36,16 @@ function App() {
   }
 
 
+
+
+
   return (
     <div>
       <Sitebar clickLogout={clearToken}/>
       {protectedViews()}
       <DatabaseApp/>
       <Paper elevation={3}/>
+      <Footer/>
     </div>
   );
 }

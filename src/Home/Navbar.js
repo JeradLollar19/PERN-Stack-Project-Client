@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontWeight: 700,
   },
   scrollButton: {
     position: 'fixed',
@@ -58,9 +59,7 @@ return (
 
 
 const Sitebar = (props) => {
-
-  
-    const classes = useStyles();
+  const classes = useStyles();
       
     return (
         <div className={classes.root}>
@@ -72,11 +71,11 @@ const Sitebar = (props) => {
           <Typography variant="h6" className={classes.title}>
             CINEMA REVIEWS
           </Typography>
-          <Button variant="contained" onClick={props.clickLogout}>LOGOUT</Button>
+          <Button id="logOut"variant="contained" onClick={props.clickLogout}>LOGOUT</Button>
         </Toolbar>
       </AppBar>
       <ScrollTop {...props}>
-      <Fab color="primary" size="medium" aria-label="scroll back to top">
+      <Fab color="primary" size="large" aria-label="scroll back to top">
         <KeyboardArrowUpIcon/>
       </Fab>
       </ScrollTop>

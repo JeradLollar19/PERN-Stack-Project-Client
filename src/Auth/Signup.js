@@ -38,7 +38,7 @@ const Signup = (props) => {
                     <Label htmlFor="password">PASSWORD</Label>
                     <Input placeholder="Create a Password" onChange={(e) => setPassword(e.target.value)} name="password" value={password} required/>
                 </FormGroup>
-                <Button variant="contained" color="primary" type="submit">SIGNUP</Button>
+                <Button variant="contained" color="primary" type="submit">CREATE USER</Button>
             </Form>
         </div>
     )

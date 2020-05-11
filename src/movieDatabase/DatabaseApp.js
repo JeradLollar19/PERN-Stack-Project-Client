@@ -59,7 +59,7 @@ const DatabaseApp = () => {
             <header>
             <hr/>
             <hr/>
-                <h1>-MOVIE DATABASE-</h1>
+                <h1>-FILM DATABASE-</h1>
             </header>
             <main>
                 <Search handleInput={handleInput} search={search}/>

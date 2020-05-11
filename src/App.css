@@ -16,7 +16,7 @@ h6 {
 
 
 label {
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   color: rgb(78, 81, 243);
 }
@@ -48,4 +48,17 @@ th {
   font-weight: 800;
   color: rgb(139, 139, 139);
   text-align: center;
+}
+
+
+footer {
+  background-color: #53565A; 
+  color: white;
+  margin-top: 213px;
+  margin-right: initial;
+}
+
+footer  p {
+  margin-top: 3.0em;
+  margin-left: 3.0em;
 }
