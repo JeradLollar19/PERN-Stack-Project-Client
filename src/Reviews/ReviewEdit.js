@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import APIURL from '../helpers/enivronment';
 import { FormGroup, Input, Form, Label, Modal, ModalBody } from 'reactstrap';
 import Button from '@material-ui/core/Button';
+import Rating from '@material-ui/lab/Rating';
 
 
 const ReviewEdit = (props) => {
@@ -36,30 +37,24 @@ const ReviewEdit = (props) => {
                 <hr />
                 <Form onSubmit={reviewUpdate}>
                     <FormGroup>
-                        <Label htmlFor="filmTitle">TITLE</Label>
+                        <Label htmlFor="filmTitle">TITLE:</Label>
                         <Input name="filmTitle" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="year">YEAR OF RELEASE</Label>
+                        <Label htmlFor="year">YEAR OF RELEASE:</Label>
                         <Input name="year" value={editYear} onChange={(e) => setEditYear(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="director">DIRECTOR</Label>
+                        <Label htmlFor="director">DIRECTOR:</Label>
                         <Input name="director" value={editDirector} onChange={(e) => setEditDirector(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="overallThoughts">OVERALL THOUGHTS</Label>
+                        <Label htmlFor="overallThoughts">OVERALL THOUGHTS:</Label>
                         <Input type="textarea" name="overallThoughts" value={editThoughts} onChange={(e) => setEditThoughts(e.target.value)} />
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="rating">RATING</Label>
-                        <Input type="select" name="rating" value={editRating} onChange={(e) => setEditRating(e.target.value)}>
-                            <option>1 (Horrible)</option>
-                            <option>2 (Bad)</option>
-                            <option>3 (Decent)</option>
-                            <option>4 (Good)</option>
-                            <option>5 (Fantastic)</option>
-                        </Input>
+                        <Label htmlFor="rating">RATING:</Label>
+                        <Rating type="select" name="rating2" precision={0.5} value={editRating} onChange={(e) => setEditRating(e.target.value)}/>
                     </FormGroup>
                     <Button variant="contained" type="submit" color="primary">UPDATE</Button>
                     <Button variant="contained" type="cancel" color="secondary">CANCEL</Button>
