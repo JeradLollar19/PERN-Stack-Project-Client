@@ -22,7 +22,7 @@ const ReviewCreate = (props) => {
                 'Content-Type': 'application/json',
                 'Authorization': props.token
             })
-        }).then((res) => res.json())
+        }).then((res) => {res.json()})
             .then((reviewFromRequest) => {
                 console.log(reviewFromRequest);
                 setFilmTitle('');
