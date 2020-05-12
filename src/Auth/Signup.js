@@ -31,11 +31,11 @@ const Signup = (props) => {
             <hr/>
             <Form onSubmit={handleSubmit}>
                 <FormGroup>
-                    <Label htmlFor="username">USERNAME</Label>
+                    <Label htmlFor="username">USERNAME:</Label>
                     <Input placeholder="Create a Username" onChange={(e) => setUsername(e.target.value)} name="username" value={username} required/>
                 </FormGroup>
                 <FormGroup>
-                    <Label htmlFor="password">PASSWORD</Label>
+                    <Label htmlFor="password">PASSWORD:</Label>
                     <Input placeholder="Create a Password" onChange={(e) => setPassword(e.target.value)} name="password" value={password} required/>
                 </FormGroup>
                 <Button variant="contained" color="primary" type="submit">CREATE USER</Button>
