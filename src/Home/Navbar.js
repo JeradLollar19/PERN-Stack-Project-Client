@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   scrollButton: {
     position: 'fixed',
     bottom: theme.spacing(2),
-    right: theme.spacing(2),
+    right: theme.spacing(4),
   },
 }));
 function ScrollTop(props) {
@@ -71,7 +71,9 @@ const Sitebar = (props) => {
           <Typography variant="h6" className={classes.title}>
             CINEMA REVIEWS
           </Typography>
-          <Button id="logOut"variant="contained" onClick={props.clickLogout}>LOGOUT</Button>
+           { props.token ? 
+           <Button id="logOut" variant="contained" onClick={props.clickLogout}>LOGOUT</Button>
+           : null }
         </Toolbar>
       </AppBar>
       <ScrollTop {...props}>
@@ -82,7 +84,6 @@ const Sitebar = (props) => {
     </div>
   );
 }
-
 
 
 

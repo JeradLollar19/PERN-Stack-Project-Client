@@ -30,6 +30,7 @@ function App() {
     setSessionToken('');
   }
 
+
   const protectedViews = () => {
     return (sessionToken === localStorage.getItem('token') ? <ReviewIndex token={sessionToken}/>
     : <Auth updateToken={updateToken}/>)
@@ -37,11 +38,9 @@ function App() {
 
 
 
-
-
   return (
     <div>
-      <Sitebar clickLogout={clearToken}/>
+      <Sitebar clickLogout={clearToken} token={sessionToken}/>
       {protectedViews()}
       <DatabaseApp/>
       <Paper elevation={3}/>
